@@ -1,0 +1,181 @@
+/*
+ * Everforest Dark Hard Theme for Rofi
+ * Based on the Everforest color scheme
+ */
+
+* {
+    /* Everforest Dark Hard Colors */
+    bg0:            #2d353b;  /* Background */
+    bg1:            #374247;  /* Background alt */
+    bg2:            #404247;  /* Background selected */
+    fg0:            #d3c6aa;  /* Foreground */
+    fg1:            #a89984;  /* Foreground alt */
+    red:            #e67e80;  /* Red */
+    green:          #a7c080;  /* Green */
+    yellow:         #dbbc7f;  /* Yellow */
+    blue:           #7fbbb3;  /* Blue */
+    magenta:        #d699b6;  /* Magenta */
+    cyan:           #83c092;  /* Cyan */
+    
+    /* Theme colors */
+    background:                  rgba(45, 53, 59, 0.8);  /* 80% transparent background */
+    background-color:            rgba(45, 53, 59, 0.8);
+    foreground:                  @fg0;
+    border-color:                @bg2;
+    separatorcolor:              @border-color;
+    scrollbar-handle:            @border-color;
+    
+    normal-background:           rgba(45, 53, 59, 0.8);  /* Transparent main background */
+    normal-foreground:           @foreground;
+    alternate-normal-background: rgba(55, 66, 71, 0.8);  /* Transparent alt background */
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @green;
+    selected-normal-foreground:  @bg0;
+    
+    active-background:           rgba(45, 53, 59, 0.8);  /* Transparent active background */
+    active-foreground:           @blue;
+    alternate-active-background: rgba(55, 66, 71, 0.8);  /* Transparent active alt background */
+    alternate-active-foreground: @blue;
+    selected-active-background:  @blue;
+    selected-active-foreground:  @bg0;
+    
+    urgent-background:           rgba(45, 53, 59, 0.8);  /* Transparent urgent background */
+    urgent-foreground:           @red;
+    alternate-urgent-background: rgba(55, 66, 71, 0.8);  /* Transparent urgent alt background */
+    alternate-urgent-foreground: @red;
+    selected-urgent-background:  @red;
+    selected-urgent-foreground:  @bg0;
+}
+
+window {
+    background-color: @background;
+    border:           2px;
+    border-color:     @green;
+    border-radius:    8px;
+    padding:          5px;
+}
+
+mainbox {
+    border:  0;
+    padding: 0;
+}
+
+message {
+    border:       2px 0 0;
+    border-color: @separatorcolor;
+    padding:      1px;
+}
+
+textbox {
+    highlight:  @selected-normal-foreground;
+    text-color: @foreground;
+}
+
+listview {
+    border:       2px solid 0 0;
+    padding:      2px 0 0;
+    border-color: @separatorcolor;
+    spacing:      2px;
+    scrollbar:    true;
+}
+
+element {
+    border:  0;
+    padding: 2px;
+}
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+element.normal.normal {
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
+}
+
+element.normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+
+element.normal.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
+}
+
+element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+    border-radius:    4px;
+}
+
+element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color:       @selected-urgent-foreground;
+}
+
+element.selected.active {
+    background-color: @selected-active-background;
+    text-color:       @selected-active-foreground;
+}
+
+element.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+}
+
+element.alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color:       @alternate-urgent-foreground;
+}
+
+element.alternate.active {
+    background-color: @alternate-active-background;
+    text-color:       @alternate-active-foreground;
+}
+
+scrollbar {
+    width:        4px;
+    border:       0;
+    handle-color: @scrollbar-handle;
+    handle-width: 8px;
+    padding:      0;
+}
+
+sidebar {
+    border:       2px 0 0;
+    border-color: @separatorcolor;
+}
+
+inputbar {
+    spacing:    0;
+    text-color: @normal-foreground;
+    padding:    2px;
+    children:   [ prompt, textbox-prompt-sep, entry, case-indicator ];
+}
+
+case-indicator,
+entry,
+prompt,
+button {
+    spacing:    0;
+    text-color: @normal-foreground;
+}
+
+button.selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+textbox-prompt-sep {
+    expand:     false;
+    str:        ":";
+    text-color: @normal-foreground;
+    margin:     0 0.3em 0 0;
+}
+
+/* Transparency support */
+window {
+    transparency: "real";
+}

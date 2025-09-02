@@ -29,7 +29,7 @@ mod_key : alt
 bind : mod + Return : "st"
 bind : mod + f : "librewolf"
 bind : mod + p : "dmenu_run"
-bind : mod + r : "rofi -show drun"
+bind : mod + o : "~/.local/bin/rofi-drun"
 
 # Window Management:
 call : mod + shift + q : close_window
@@ -70,7 +70,7 @@ call : mod + shift + space : global_floating
 call : mod + shift + f : fullscreen
 
 # Reload Config
-call : mod + shitf + r : reload_config
+call : mod + r : reload_config
 
 # Scratchpads
 scratchpad : mod + alt + 1 : create 1
@@ -111,8 +111,5 @@ workspace : mod + shift + 9  : swap 9
 # exec
 exec : sxbar
 exec : setxkbmap de
-exec : picom -b
-exec : feh --bg-scale ~/Downloads/raindrops_1.png
-exec : pipewire
-exec : wireplumber
-
+exec : picom -b --config ~/.config/picom/picom.conf
+exec : feh --bg-scale ~/dots/wallpapers/bamboo-everforest1.png
