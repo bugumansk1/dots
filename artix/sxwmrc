@@ -1,11 +1,11 @@
 # Colour Themes:
-focused_border_colour    : #c0cbff
-unfocused_border_colour  : #555555
+focused_border_colour    : #7FBBB3
+unfocused_border_colour  : #272E33
 swap_border_colour       : #fff4c0
 
 # General Options:
-gaps                    : 4
-border_width            : 1
+gaps                    : 6
+border_width            : 2
 master_width            : 60 # Percentage of screen width
 resize_master_amount    : 1
 resize_stack_amt        : 20
@@ -23,7 +23,7 @@ start_fullscreen        : "mpv", "vlc"
 # Commands must be surrounded with ""
 # Function calls don't need this
 
-mod_key : alt
+mod_key : super
 
 # Application Launchers:
 bind : mod + Return : "st"
@@ -110,6 +110,8 @@ workspace : mod + shift + 9  : swap 9
 
 # exec
 exec : sxbar
-exec : setxkbmap de
 exec : picom -b --config ~/.config/picom/picom.conf
 exec : feh --bg-scale ~/dots/wallpapers/bamboo-everforest1.png
+exec : eval `dbus-launch --sh-syntax`
+exec : xbindkeys
+exec : setxkbmap de
