@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrainsMono Nerd Font:pixelsize=18:antialias=true:autohint=true";
+static char *font = "JetBrainsMono Nerd Font:style=Medium:pixelsize=18:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -96,45 +96,46 @@ unsigned int tabspaces = 8;
 /* bg opacity */
 float alpha = 0.8;
 
+/* Everforest Dark Hard Color Scheme for ST Terminal */
+/* Add these color definitions to your config.h file */
+
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+    /* 8 normal colors */
+    "#374247", /* black   */
+    "#e67e80", /* red     */
+    "#a7c080", /* green   */
+    "#dbbc7f", /* yellow  */
+    "#7fbbb3", /* blue    */
+    "#d699b6", /* magenta */
+    "#83c092", /* cyan    */
+    "#d3c6aa", /* white   */
 
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+    /* 8 bright colors */
+    "#404247", /* black   */
+    "#e67e80", /* red     */
+    "#a7c080", /* green   */
+    "#dbbc7f", /* yellow  */
+    "#7fbbb3", /* blue    */
+    "#d699b6", /* magenta */
+    "#83c092", /* cyan    */
+    "#d3c6aa", /* white   */
 
-	[255] = 0,
+    [255] = 0,
 
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"gray90", /* default foreground colour */
-	"black", /* default background colour */
+    /* more colors can be added after 255 to use with DefaultXX */
+    "#d3c6aa", /* default foreground colour */
+    "#2d353b", /* default background colour */
+    "#d3c6aa", /* default cursor color */
 };
-
 
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 258;
-unsigned int defaultbg = 259;
-unsigned int defaultcs = 256;
+unsigned int defaultfg = 256;
+unsigned int defaultbg = 257;
+unsigned int defaultcs = 258;
 static unsigned int defaultrcs = 257;
 
 /*
