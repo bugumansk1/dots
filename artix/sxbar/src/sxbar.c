@@ -312,11 +312,11 @@ void init_defaults(void)
 	config.vertical_padding = 0;
 	config.horizontal_padding = 0;
 	config.text_padding = 0;
-	config.border = False;
-	config.border_width = 0;
-	config.background_colour = parse_col("#1E2326");
-	config.foreground_colour = parse_col("#D3C6AA");
-	config.border_colour = parse_col("#005577");
+	config.border = True;
+	config.border_width = 2;
+	config.background_colour = parse_col("#2d353b");
+	config.foreground_colour = parse_col("#d3c6aa");
+	config.border_colour = parse_col("#4D4C43");
 	config.font = strdup("fixed");
 	init_modules();
 }
