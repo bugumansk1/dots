@@ -14,3 +14,13 @@
 
 "playerctl previous"
    XF86AudioPrev
+
+# Volume controls
+"amixer set Master 5%+"
+   XF86AudioRaiseVolume
+
+"amixer set Master 5%-"
+   XF86AudioLowerVolume
+
+"amixer set Master toggle"
+   XF86AudioMute

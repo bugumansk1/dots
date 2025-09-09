@@ -29,8 +29,8 @@ mod_key : super
 bind : mod + Return : "st"
 bind : mod + f : "librewolf"
 bind : mod + p : "dmenu_run"
-bind : mod + o : "~/.local/bin/rofi-drun"
-
+bind : mod + o : "rofi -show drun"
+bind : mod + e : "nemo"
 # Window Management:
 call : mod + shift + q : close_window
 call : mod + c : centre_window

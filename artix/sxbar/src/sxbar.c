@@ -364,7 +364,7 @@ void init_modules(void)
 	    (Module){.name = strdup("volume"),
 	             .command = "amixer get Master | grep -o '[0-9]*%' | head -1 || echo 'N/A'",
 	             .enabled = True,
-	             .refresh_interval = 5,
+	             .refresh_interval = 2,
 	             .last_update = 0,
 	             .cached_output = NULL};
 	/* cpu */
