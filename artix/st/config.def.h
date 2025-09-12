@@ -94,7 +94,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 0.9;
 
 /* Everforest Dark Hard Color Scheme for ST Terminal */
 /* Add these color definitions to your config.h file */
@@ -125,7 +125,7 @@ static const char *colorname[] = {
 
     /* more colors can be added after 255 to use with DefaultXX */
     "#d3c6aa", /* default foreground colour */
-    "#2d353b", /* default background colour */
+    "#1E2326", /* default background colour */
     "#d3c6aa", /* default cursor color */
 };
 
