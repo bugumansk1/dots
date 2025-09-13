@@ -1,0 +1,9 @@
+/usr/bin/pipewire &
+/usr/bin/pipewire-pulse &
+/usr/bin/wireplumber &
+export QT_QPA_PLATFORMTHEME=qt6ct
+eval `dbus-launch --sh-syntax`
+nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceCompositionPipeline = On }"
+setxkbmap de
+xbindkeys
+exec i3

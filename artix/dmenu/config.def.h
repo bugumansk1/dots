@@ -5,13 +5,13 @@ static int topbar = 1;                      /* -b  option; if 0, dmenu appears a
 static const unsigned int alpha = 0xff;     /* Amount of opacity. 0xff is opaque             */
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
-	"JetBrainsMono Nerd Font:size=10"
+	"JetBrainsMono Nerd Font:size=12"
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
-	[SchemeNorm] = { "#d3c6aa", "#2d353b" },
-	[SchemeSel] = { "#A7C080", "#2d353b" },
+	[SchemeNorm] = { "#d3c6aa", "#1E2326" },
+	[SchemeSel] = { "#A7C080", "#1E2326" },
 	[SchemeOut] = { "#000000", "#00ffff" },
 };
 
