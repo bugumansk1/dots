@@ -165,6 +165,35 @@
       julia-bin
       javacc
       pinentry-tty
+      thunderbird
+      obsidian
+      gifski
+      giflib
+      gifgen
+      av1an
+      rav1e
+      libde265
+      x265
+      openh264
+      pwvucontrol
+      kdePackages.kdenlive
+      gimp
+      libimobiledevice
+      ifuse
+      sccache
+      python313Packages.pip
+      kdePackages.polkit-kde-agent-1
+      exfat
+      exfatprogs
+      gparted
+      hyprpolkitagent
+      llvmPackages_20.clang-unwrapped
+      gccNGPackages_15.libstdcxx
+      discord
+      chromium
+      shira
+      deluge
+      qbittorrent
     ];
   };
 
@@ -175,7 +204,15 @@
     liberation_ttf
     ipafont
     migu
+    nerd-fonts.fira-code
+    nerd-fonts.caskaydia-cove
+    nerd-fonts.caskaydia-mono
+    nerd-fonts.dejavu-sans-mono
+    nerd-fonts.ubuntu
+    nerd-fonts.ubuntu-mono
   ];
+
+environment.etc."xdg/menus/applications.menu".source = "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
 
   programs.niri.enable = true;
 
@@ -186,12 +223,16 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+services.usbmuxd.enable = true;
+
 programs.steam = {
   enable = true;
   remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
   dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
 };
+
+
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -208,7 +249,6 @@ programs.steam = {
     libgccjit
     zsh
     xwayland-satellite
-    python313Packages.pip
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

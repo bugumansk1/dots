@@ -8,21 +8,21 @@
     // Choose the order of the modules
     "modules-left": [
         "niri/workspaces",
-        "tray",
+        "tray"
     ],
     "modules-center": [
-        "niri/window"
+        "mpris"
     ],
     "modules-right": [
-        "pulseaudio",
+        "wireplumber",
         "network",
         "cpu",
         "memory",
-        "temperature",
         "backlight",
         "power-profiles-daemon",
         "battery",
         "clock",
+        "custom/power"
     ],
     // Modules configuration
     // "sway/workspaces": {
@@ -60,6 +60,19 @@
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
     },
+    "mpris": {
+	      "format": "{player_icon} {dynamic}",
+	      "format-paused": " <i>{dynamic}</i>",
+        "interval": 1,
+	      "player-icons": {
+		    "default": "",
+		    "mpv": "🎵"
+	  },
+	"status-icons": {
+		"paused": "⏸"
+	},
+	// "ignored-players": ["firefox"]
+},
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
         "format-disconnected": "Disconnected ",
@@ -157,9 +170,9 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-wifi": "{essid} ",
         "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
+        "tooltip-format": "{essid} ({signalStrength}%) {ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
@@ -169,19 +182,22 @@
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format-muted": " {format_source}",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
+    },
+    "wireplumber": {
+    "format": "{volume}% {icon}",
+    "format-muted": "  ",
+    "format-icons": ["", "", ""],
+    "on-click": "pwvucontrol",
+    "max-volume": 100,
+    "scroll-step": 1
     },
     "custom/media": {
         "format": "{icon} {text}",

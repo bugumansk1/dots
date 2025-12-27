@@ -1,6 +1,6 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: JetBrainsMono Nerd Font;
+    font-family:  JetBrainsMono Nerd Font;
     font-size: 13px;
 }
 
@@ -16,14 +16,6 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
-window#waybar.termite {
-    background-color: #3F3F3F;
-}
-
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
-}
 
 button {
     /* Use box-shadow instead of border so the text isn't offset */
@@ -41,7 +33,7 @@ button:hover {
 
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
-    background-color: #a37800;
+    background-color: rgb(46, 56, 60);
 }
 
 #workspaces button {
@@ -105,18 +97,18 @@ button:hover {
 }
 
 #clock {
-    background-color: #64727D;
+    background-color: transparent;
     color : #D3C6AA;
 }
 
 #battery {
-    background-color: #ffffff;
+    background-color: transparent;
     color: #D3C6AA;
 }
 
 #battery.charging, #battery.plugged {
     color: #D3C6AA;
-    background-color: #48584E;
+    background-color: transparent;
 }
 
 @keyframes blink {
@@ -129,7 +121,7 @@ button:hover {
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
     background-color: #E67E80;
-    color: #ffffff;
+    color: #D3C6AA;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -142,18 +134,18 @@ button:hover {
 }
 
 #power-profiles-daemon.performance {
-    background-color: #5C3F4F;
-    color: #ffffff;
+    background-color: transparent;
+    color: #D3C6AA;
 }
 
 #power-profiles-daemon.balanced {
-    background-color: #3F5865;
-    color: #ffffff;
+    background-color: transparent;
+    color: #D3C6AA;
 }
 
 #power-profiles-daemon.power-saver {
-    background-color: #48584E;
-    color: #000000;
+    background-color: transparent;
+    color: #D3C6AA;
 }
 
 label:focus {
@@ -161,12 +153,12 @@ label:focus {
 }
 
 #cpu {
-    background-color: #493B40;
+    background-color: transparent;
     color: #D3C6AA;
 }
 
 #memory {
-    background-color: #3C4841;
+    background-color: transparent;
     color : #D3C6AA;
 }
 
@@ -175,12 +167,12 @@ label:focus {
 }
 
 #backlight {
-    background-color: #272E33;
+    background-color: transparent;
     color : #D3C6AA;
 }
 
 #network {
-    background-color: #45443C;
+    background-color: transparent;
     color : #D3C6AA;
 }
 
@@ -189,22 +181,18 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #4C3743;
+    background-color: transparent;
     color: #D3C6AA;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
+    background-color: rgb(46, 56, 60);
+    color: #D3C6AA;
 }
 
-#wireplumber {
-    background-color: #fff0f5;
-    color: #000000;
-}
-
-#wireplumber.muted {
-    background-color: #f53c3c;
+#wireplumber, #wireplumber.muted {
+    background-color: transparent;
+    color: #D3C6AA;
 }
 
 #custom-media {
@@ -221,8 +209,12 @@ label:focus {
     background-color: #ffa000;
 }
 
+#mpris {
+  background-color: transparent;
+  color: #D3C6AA;
+}
 #temperature {
-    background-color: #463F48;
+    background-color: transparent;
     color : #D3C6AA;
 }
 
