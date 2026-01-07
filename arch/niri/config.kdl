@@ -337,6 +337,11 @@ window-rule {
 }
 
 window-rule {
+  match app-id=r#"zen"#
+  open-maximized true
+}
+
+window-rule {
   match app-id=r#"librewolf"#
   open-maximized true
 }
@@ -376,13 +381,14 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
-    Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn-sh "fuzzel -f CascadiaCode Nerd Font"; }
+    Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn-sh "fuzzel -a top -w 1080 -x 6 -y 6 -P 6 -r 0 -b 272E33ff -t D3C6AAff -s DBBC7Fff --input-color D3C6AAff --prompt-color DBBC7Fff -S 272E33ff -f CascadiaCode Nerd Font -C 4F5B58ff -B 3"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Mod+M hotkey-overlay-title="quick shutdown" { spawn-sh "systemctl poweroff"; }
     Mod+Shift+M hotkey-overlay-title="quick suspend" { spawn-sh "systemctl suspend"; }
     Mod+B hotkey-overlay-title="spawn Librewolf" { spawn "librewolf"; }
     Mod+E hotkey-overlay-title="spawn dolphin" { spawn "dolphin"; }
     Mod+Shift+D hotkey-overlay-title="spawn demacs" { spawn-sh "emacsclient -c -a 'emacs'"; }
+    Mod+Z hotkey-overlay-title="spawn zen browser" { spawn "zen-browser"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
